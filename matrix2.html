@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Формирование матрицы</title>
+  <meta charset="utf-8">
+
+</head>
+<body>
+  <script>
+  let rows = prompt('Введите число M');
+  let columns = prompt('Введите число N');
+  let condition = "False";
+  let matrix = [];
+  for (let i = 0; i < rows; i++) {
+    matrix[i] = [];
+    for (let j = 0; j < columns; j++) {
+      let elements = prompt('Введите элементы массива')
+      matrix[i][j] = elements;
+      if (matrix[i][columns - 1] > 0 && condition == "False") {
+      let peremen = matrix[i][1];
+      matrix[i][1] = matrix[i][columns - 1];
+      matrix[i][columns - 1] = peremen;
+      }  
+      if (matrix[i][columns - 1] < 0) {
+        condition = "True"
+        break;
+      }
+    }
+  }
+  console.log(matrix);
+  </script>
+</body>
+</html>
