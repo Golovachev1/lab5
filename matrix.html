@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Формирование матрицы</title>
+  <meta charset="utf-8">
+
+</head>
+<body>
+  <script>
+  let massiv = Number(prompt('Введите число M'));
+  let dublicate = Number(prompt('Введите число N'));
+  let matrix;
+  if (massiv < 1) {
+    document.write('Число M должно быть положительным!')
+  } else if (dublicate < 1) {
+    document.write('Число N должно быть положительным!')
+  } else {
+    for (let i = 0; i < massiv; i++) {
+    let elements = prompt('Введите элементы массива');
+    matrix = Array(dublicate).fill(elements)
+    document.write(matrix.join('\n'), "<br>");
+  }
+}
+  </script>
+</body>
+</html>
